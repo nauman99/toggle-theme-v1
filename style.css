@@ -1,0 +1,25 @@
+body {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  margin: 0;
+  padding: 50px 300px;
+}
+nav ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+nav ul li {
+  display: inline;
+}
+span {
+  color: royalblue;
+  font-style: italic;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 28px;
+}
+p {
+  margin-top: 50px;
+  font-size: 20px;
+  padding: 20px 45px;
+  line-height: 2;
+}

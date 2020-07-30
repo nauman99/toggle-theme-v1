@@ -31,6 +31,27 @@
         understanding a new concept and more about recognizing something you
         have already been doing for a while.
       </p>
+      <h2>tl;dr</h2>
+      <p>
+        You have a closure when
+        <strong> a function accesses variables defined outside of it.</strong>
+      </p>
+      <p>
+        Notice how user => user.startsWith(query) is itself a function. It uses
+        the query variable. But the query variable is defined outside of that
+        function. That’s a closure.
+      </p>
+      <hr />
+      <h2>Step 1: Functions Can Access Outside Variables</h2>
+      <p>
+        To understand closures, we need to be somewhat familiar with variables
+        and functions.
+      </p>
+      <p>
+        But what if we wanted to later change the food variable outside of the
+        eat function? To do this, we can move the food variable itself out of
+        our function into the top level.
+      </p>
     </main>
     <script src="script.js"></script>
   </body>

@@ -1,37 +1,45 @@
 body {
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-family: "Inter", sans-serif;
   margin: 0;
-  padding: 50px 300px;
+  padding: 150px 415px;
 }
 header {
   position: fixed;
   top: 0;
   background-color: #fff;
 }
-nav ul {
+.navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 30px 0;
 }
-nav ul li {
-  display: inline;
-}
-#icon {
-  margin-left: 450px;
-}
-span {
+
+.accent {
   color: royalblue;
+  font-weight: bold;
+}
+.topic {
   font-style: italic;
   font-family: "Times New Roman", Times, serif;
   font-size: 28px;
 }
-h2 {
-  margin-left: 40px;
+#icon {
+  width: 30px;
+  height: 30px;
+  margin-left: 370px;
 }
 p {
-  margin-top: 50px;
-  font-size: 20px;
-  padding: 20px 45px;
-  line-height: 2;
+  margin: 35px 0;
+  font-size: 18px;
+  line-height: 1.75;
 }
-
+.code-snippet {
+  background-color: #f4f4f4;
+  padding: 19px;
+}
+.code-text {
+  font-family: "Courier New", Courier, monospace;
+  font-size: 14px;
+  margin: 20px 0;
+}

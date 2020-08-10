@@ -9,26 +9,29 @@
   <body>
     <header>
       <nav>
-        <ul>
-          <li>
-            <h1>whatthefork.is · <span>a closure</span></h1>
-          </li>
-          <li onclick="switchTheme()">
+        <div class="navbar">
+          <h1>whatthefork.is · <span class="accent topic">a closure</span class="accent"></h1>
+          <div onclick="switchTheme()">
             <img src="./light.PNG" id="icon" />
-          </li>
-        </ul>
+          </div>
+        </div>
       </nav>
     </header>
 
     <main>
       <p>
         Closures are confusing because they are an “invisible” concept.
-        <br /><br />
+      </p>
+
+      <p>
         When you use an object, a variable, or a function, you do this
-        intentionally. You think: “I’m gonna need a variable here,” and add it
-        to your code.<br /><br />
+        intentionally. You <br> think: “I’m gonna need a variable here,” and add it
+        to your code.
+      </p>
+
+      <p>
         Closures are different. By the time most people approach closures, they
-        have already used them unknowingly many times — and it is likely that
+        have <br>  already used them unknowingly many times — and it is likely that
         this is true for yourself, too. So learning closures is less about
         understanding a new concept and more about recognizing something you
         have already been doing for a while.
@@ -38,10 +41,20 @@
         You have a closure when
         <strong> a function accesses variables defined outside of it.</strong>
       </p>
+      <p>For example, this code snippet contains a closure:</p>
+      <div class="code-snippet">
+        <span class="code-text"> <span class="accent">let</span> users = ['Alice', 'Dan', 'Jessica'];</span> <br>
+        <span class="code-text"> <span class="accent">let</span>  query = 'A';</span> <br>
+        <span class="code-text"> <span class="accent">let</span>  user = users.filter(user => user.startsWith(query));</span> <br>
+      </div>
       <p>
         Notice how user => user.startsWith(query) is itself a function. It uses
         the query variable. But the query variable is defined outside of that
         function. That’s a closure.
+      </p>
+      <hr />
+      <p>
+       <strong> You can stop reading here, if you want.</strong> The rest of this article approaches closures in a different way. Instead of explaining what a closure is, it will walk you through the process of discovering closures — like the first programmers did in the 1960s.
       </p>
       <hr />
       <h2>Step 1: Functions Can Access Outside Variables</h2>
@@ -49,6 +62,13 @@
         To understand closures, we need to be somewhat familiar with variables
         and functions.
       </p>
+      <div class="code-snippet">
+        <span class="code-text"> <span class="accent">function </span> eat() {</span> <br>
+        <span class="code-text"> &nbsp; <span class="accent">let</span>  food = 'cheese';</span> <br>
+        <span class="code-text"> &nbsp; console.log(food + ' is good');</span> <br>
+        <span class="code-text"> }</span> <br><br>
+        <span class="code-text"> eat(); // Logs 'cheese is good'</span> <br>
+      </div>
       <p>
         But what if we wanted to later change the food variable outside of the
         eat function? To do this, we can move the food variable itself out of

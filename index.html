@@ -74,6 +74,29 @@
         eat function? To do this, we can move the food variable itself out of
         our function into the top level.
       </p>
+      
+      <div class="code-snippet">
+        <span class="code-text"> <span class="accent">let</span> food = 'cheese'; // We moved it outside {</span> <br>
+        <span class="code-text"> <span class="accent">function </span> eat() {</span> <br>
+        
+        <span class="code-text"> &nbsp; console.log(food + ' is good');</span> <br>
+        <span class="code-text"> }</span>
+      </div>
+      <p>This lets us change the food “from the outside” any time that we want to:</p>
+
+      
+      <div class="code-snippet">
+        <span class="code-text">eat(); // Logs 'cheese is good'</span> <br>
+        <span class="code-text"> food = 'pizza';</span> <br>
+        
+        <span class="code-text"> eat(); // Logs 'pizza is good'</span> <br>
+        <span class="code-text"> food = 'sushi';</span>
+        <span class="code-text">eat(); // Logs 'sushi is good'</span> <br>
+      </div>
+
+      <p>In other words, the food variable is no longer local to our eat function, but our eat function nevertheless has no trouble accessing it. <strong>Functions can access variables outside of them.</strong> Stop for a second and make sure that you have no problem with this idea. Once it has settled comfortably in your brain, move to the second step.
+
+      </p>
     </main>
     <script src="script.js"></script>
   </body>
